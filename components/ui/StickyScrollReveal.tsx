@@ -6,7 +6,6 @@ import { FaChevronRight, FaLocationArrow } from "react-icons/fa6";
 
 export const StickyScroll = ({
   content,
-  shouldScroll,
 }: {
   content: {
     logoUrl: string;
@@ -20,12 +19,17 @@ export const StickyScroll = ({
     right?: React.ReactNode | any;
     backgroundGradient?: string;
   };
-  shouldScroll: boolean;
 }) => {
   const ref = useRef<any>(null);
+  const [shouldScroll, setShouldScroll] = useState<boolean>(false);
+
   useEffect(() => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  }, [shouldScroll]);
+    if (shouldScroll) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setShouldScroll((prev) => !prev);
+    }
+  }, [shouldScroll, content]);
 
   return (
     <motion.div className="min-h-[30rem] h-[calc(100dvh-10rem)] overflow-x-hidden overflow-y-auto grid grid-cols-2 relative gap-10 px-10">

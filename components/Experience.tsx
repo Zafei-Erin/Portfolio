@@ -8,7 +8,7 @@ import { StickyScroll } from "./ui/StickyScrollReveal";
 
 export const WorkExperience = () => {
   const [index, setIndex] = useState<number>(0);
-  const [shouldScroll, setShouldScroll] = useState<boolean>(false);
+
 
   return (
     <motion.div
@@ -22,7 +22,7 @@ export const WorkExperience = () => {
       <div className="py-16 px-10 font-sans font-bold text-3xl">
         My Work Experience
       </div>
-      <StickyScroll content={experience[index]} shouldScroll={shouldScroll} />
+      <StickyScroll content={experience[index]}  />
       <h3 className="text-2xl font-semibold mt-16 px-8">Here are more...</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 max-w-6xl items-center mt-10 mx-auto justify-center gap-4 px-8">
         {experience.map(
@@ -35,7 +35,7 @@ export const WorkExperience = () => {
                 title={exp.title}
                 handleClick={() => {
                   setIndex(i);
-                  setShouldScroll((prev) => !prev);
+                  
                 }}
               />
             )
