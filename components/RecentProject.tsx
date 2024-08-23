@@ -1,12 +1,12 @@
 "use client";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useId, useRef, useState } from "react";
 import { BiCategoryAlt } from "react-icons/bi";
-import { MdOutlinePeopleAlt, MdOutlineDateRange } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
+import { MdOutlineDateRange, MdOutlinePeopleAlt } from "react-icons/md";
 import { VscTerminal } from "react-icons/vsc";
 
 export function RecentProject() {
@@ -179,6 +179,12 @@ export function RecentProject() {
                   scale: 1.08,
                   zIndex: 100,
                   transition: { duration: 0.2 },
+                }}
+                initial={{ opacity: 0, translateX: 30 }}
+                whileInView={{
+                  opacity: 1,
+                  translateX: 0,
+                  transition: { duration: 0.3 * index },
                 }}
                 style={{
                   zIndex: index,

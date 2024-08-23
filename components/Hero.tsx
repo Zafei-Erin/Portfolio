@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MagicButton } from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { WavyBackground } from "./ui/WavyBackground";
+import { socialMedia } from "@/data/socialMedia";
 
 export const Hero = () => {
   return (
@@ -78,8 +79,20 @@ export const Hero = () => {
             frameworks. I am a passionate developers that love to build amazing
             products.
           </p>
+          <div className="flex items-center justify-center md:gap-3 gap-6 mt-6">
+            {socialMedia.map(({ id, img, link }) => (
+              <a
+                href={link}
+                target="_blank"
+                key={id}
+                className="w-10 h-10 cursor-pointer flex justify-center z-[999] items-center backdrop-filter backdrop-blur-lg transition saturate-200 bg-opacity-75 dark:bg-black-200 bg-violet-400 hover:opacity-80 rounded-lg border border-black-300"
+              >
+                <img src={img} alt={id + ""} width={20} height={20} />
+              </a>
+            ))}
+          </div>
           <div className="flex items-center justify-center gap-3 mt-10 sm:mt-3">
-            <a href="#project">
+            <a href="#projects">
               <MagicButton
                 icon={<FaLocationArrow />}
                 position="right"
