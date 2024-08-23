@@ -29,7 +29,7 @@ export const StickyScroll = ({
     } else {
       setShouldScroll((prev) => !prev);
     }
-  }, [shouldScroll, content]);
+  }, [content]);
 
   return (
     <motion.div className="min-h-[30rem] h-[calc(100dvh-10rem)] overflow-x-hidden overflow-y-auto grid grid-cols-2 relative gap-10 px-10">
