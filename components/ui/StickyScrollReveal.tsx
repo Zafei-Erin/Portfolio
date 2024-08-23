@@ -24,7 +24,7 @@ export const StickyScroll = ({
   const [shouldScroll, setShouldScroll] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(1);
+    console.log(1, shouldScroll, content);
     if (shouldScroll) {
       console.log("scroll");
       ref.current.scrollIntoView({ behavior: "smooth" });
