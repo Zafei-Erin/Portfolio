@@ -44,7 +44,6 @@ export function RecentProject() {
         left = (window.innerWidth - 40 - 340) / (cards.length - 1);
         setIsMobile(true);
       } else {
-        console.log(window.innerWidth);
         left =
           (Math.min(window.innerWidth, 1300) - 40 - 386) / (cards.length - 1);
         setIsMobile(false);
