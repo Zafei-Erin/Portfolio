@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { RecentProject } from "@/components/RecentProject";
 import { TechStack } from "@/components/TechStack";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { navItems } from "@/data";
+import { navItems } from "@/data/index";
 
 export default function Home() {
   return (

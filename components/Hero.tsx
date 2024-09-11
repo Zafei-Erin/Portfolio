@@ -74,7 +74,7 @@ export const Hero = () => {
               Liu Jiahui
             </span>
           </h1>
-          <p className="text-gray-700 md:text-xl mt-6">
+          <p className="text-gray-700 md:text-xl mt-6 px-3">
             I build beautiful products with the latest technologies and
             frameworks. I am a passionate developers that love to build amazing
             products.

@@ -17,7 +17,10 @@ const getRandomColor = () => {
 };
 export const TechStack = () => {
   return (
-    <div id="techstack" className="min-h-40 mb-20 flex max-md:flex-col md:items-start md:justify-evenly gap-10 px-36 p-5 lg:p-10">
+    <div
+      id="techstack"
+      className="min-h-40 mb-20 flex max-md:flex-col md:items-start md:justify-evenly gap-10 p-16 lg:p-32"
+    >
       <motion.div
         initial={{ opacity: 0, translateY: 50 }}
         animate={{ opacity: 1, translateY: 0 }}
@@ -51,7 +54,7 @@ export const TechStack = () => {
           stiffness: 120,
           damping: 10,
         }}
-        className="flex gap-3 mt-10 lg:gap-8 w-full md:w-fit items-start justify-center"
+        className="flex gap-3 mt-10 lg:gap-8 w-full md:w-fit items-start justify-center text-xs lg:text-base"
       >
         <div className="flex flex-col gap-3 lg:gap-8">
           {["JavaScript", "TypeScript", "Golang", "Python"].map((item) => (
@@ -64,7 +67,7 @@ export const TechStack = () => {
                 transition: { duration: 2 },
               }}
               key={item}
-              className="hover:translate-x-2 transition duration-100 py-4 px-3 text-sm lg:text-base bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
+              className="hover:translate-x-2 transition duration-100 py-4 px-3 bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
             >
               {item}
             </motion.div>
@@ -84,7 +87,7 @@ export const TechStack = () => {
                 transition: { duration: 2 },
               }}
               key={item}
-              className="hover:translate-x-2 transition duration-100 py-4 px-3 text-sm lg:text-base bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
+              className="hover:translate-x-2 transition duration-100 py-4 px-3 bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
             >
               {item}
             </motion.div>
@@ -101,7 +104,7 @@ export const TechStack = () => {
                 transition: { duration: 2 },
               }}
               key={item}
-              className="hover:translate-x-2 transition duration-100 py-4 px-3 text-sm lg:text-base bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
+              className="hover:translate-x-2 transition duration-100 py-4 px-3 bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
             >
               {item}
             </motion.div>
@@ -120,7 +123,7 @@ export const TechStack = () => {
                 transition: { duration: 2 },
               }}
               key={item}
-              className="hover:translate-x-2 transition duration-100 py-4 px-3 text-sm lg:text-base bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
+              className="hover:translate-x-2 transition duration-100 py-4 px-3 bg-white opacity-100 rounded-lg text-center border border-[#10132E] text-[#10132E]"
             >
               {item}
             </motion.div>
